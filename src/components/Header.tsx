@@ -38,7 +38,7 @@ const Header = ({ pathname }: { pathname?: string }) => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              Faotify
+              Favotify
             </Typography>
             <Link href="/">
               <Button color="inherit">Top</Button>
