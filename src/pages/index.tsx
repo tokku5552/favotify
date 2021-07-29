@@ -1,9 +1,11 @@
-import App from '../components/App'
+import App from "../components/App";
+import SwipeableTextMobileStepper from "../components/Carousel";
 
 export default function Home() {
   return (
     <App>
-      <p>Index Page</p>
+      <p>Top Page</p>
+      <SwipeableTextMobileStepper />
     </App>
-  )
+  );
 }
