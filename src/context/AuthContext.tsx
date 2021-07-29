@@ -1,8 +1,3 @@
-import { createContext } from "react";
-import firebaseClient from "../lib/firebase-client";
-
-const AuthContext = createContext<{ user: firebaseClient.User | null }>({
-  user: null,
-});
-
+import React from "react";
+const AuthContext = React.createContext({});
 export default AuthContext;
