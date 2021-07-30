@@ -1,0 +1,28 @@
+<mxfile host="65bd71144e">
+    <diagram id="iqxzmEOkayr50nxOApNx" name="ページ1">
+        <mxGraphModel dx="1546" dy="543" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="index" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="190" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="SpotifyLogin" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                    <mxGeometry x="10" y="60" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="music" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                    <mxGeometry x="10" y="90" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="login" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="190" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="TwitterLogin" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="4">
+                    <mxGeometry x="10" y="40" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Login" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="90" y="220" width="180" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
