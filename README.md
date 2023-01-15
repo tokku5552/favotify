@@ -1,12 +1,19 @@
 # favotify
-
+Spotifyで今週一番再生した曲をTwitterに投稿するbotサービス
 ![](docs/archtecture.drawio.png)
 
-# コマンド集
+## Environment
+|tool|version|
+|--|--|
+|node|v18.12.1|
+|npm|8.19.2|
+|yarn|1.22.19|
+
+# Getting Started
 
 - リポジトリからクローンしてきたとき
 ```bash:
-yarn
+yarn install
 ```
 
 - ローカルでのサーバ立ち上げ
@@ -16,5 +23,5 @@ yarn dev
 
 ### 旧リポジトリ
 
-[Favotify](https://github.com/klsh1tt/Favotify)
+- [Favotify](https://github.com/klsh1tt/Favotify)
 
