@@ -23,6 +23,13 @@ yarn install
 yarn dev
 ```
 
+## Tips
+- UIに関してはChakura UIを採用している
+  - [Chakra UI - A simple, modular and accessible component library that gives you the building blocks you need to build your React applications. - Chakra UI](https://chakra-ui.com/)
+    - 公式ページ
+  - [Chakra Templates](https://chakra-templates.dev/)
+    - テンプレート集
+
 ### 旧リポジトリ
 
 - [Favotify](https://github.com/klsh1tt/Favotify)
