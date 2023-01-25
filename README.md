@@ -2,6 +2,8 @@
 Spotifyで今週一番再生した曲をTwitterに投稿するbotサービス
 ![](docs/archtecture.drawio.png)
 
+- [figma](https://www.figma.com/file/XdjEpS4faSqNDM9P2t1HgM/Favotify?node-id=0%3A1&t=NVLU2ZiJAaHxK22o-1)
+
 ## Environment
 |tool|version|
 |--|--|
