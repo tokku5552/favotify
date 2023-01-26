@@ -17,4 +17,5 @@ jobs:
         run: |
           yarn install
           yarn lint
-          # yarn test
+          yarn format --check
+          yarn test
