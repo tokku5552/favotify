@@ -8,9 +8,6 @@ const TopPage: NextPage = () => {
   return (
     <>
       <NavigationBar>
-        <center>
-          <Heading>Top Chart</Heading>
-        </center>
         <ul>
           <li>
             <Link href='/'>LP Page</Link>
@@ -19,6 +16,9 @@ const TopPage: NextPage = () => {
             <Link href='/setting'>Setting Page</Link>
           </li>
         </ul>
+        <center>
+          <Heading>Top Chart</Heading>
+        </center>
         <ChartTab />
       </NavigationBar>
     </>

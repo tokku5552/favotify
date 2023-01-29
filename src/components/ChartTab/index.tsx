@@ -21,13 +21,13 @@ export default function ChartTab() {
                 <ChartTable span={span} charts={charts} />
               </TabPanel>
               <TabPanel>
-                <p>two!</p>
+                <p>weekly!</p>
               </TabPanel>
               <TabPanel>
-                <p>three!</p>
+                <p>monthly!</p>
               </TabPanel>
               <TabPanel>
-                <p>three!</p>
+                <p>yearly!</p>
               </TabPanel>
             </TabPanels>
           </Tabs>
