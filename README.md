@@ -18,6 +18,14 @@ Spotifyで今週一番再生した曲をTwitterに投稿するbotサービス
 yarn install
 ```
 
+- firebase-cliのインストール
+```bash:
+npm install -g firebase-tools
+
+# Next.js用の機能有効化
+npx firebase experiments:enable webframeworks
+```
+
 - ローカルでのサーバ立ち上げ
 ```bash:
 yarn dev
