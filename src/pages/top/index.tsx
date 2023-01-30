@@ -1,5 +1,7 @@
+import { Heading } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
+import ChartTab from '../../components/ChartTab';
 import NavigationBar from '../../components/NavigationBar';
 
 const TopPage: NextPage = () => {
@@ -14,6 +16,10 @@ const TopPage: NextPage = () => {
             <Link href='/setting'>Setting Page</Link>
           </li>
         </ul>
+        <center>
+          <Heading>Top Chart</Heading>
+        </center>
+        <ChartTab />
       </NavigationBar>
     </>
   );
