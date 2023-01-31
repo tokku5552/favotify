@@ -15,3 +15,5 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FAVOTIFY_DEV }}'
           projectId: favotify-dev
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
