@@ -23,7 +23,8 @@ yarn install
 npm install -g firebase-tools
 
 # Next.js用の機能有効化
-npx firebase experiments:enable webframeworks
+# GitHub Actionsでのデプロイがうまくいかないため行わない
+# npx firebase experiments:enable webframeworks
 ```
 
 - ローカルでのサーバ立ち上げ
