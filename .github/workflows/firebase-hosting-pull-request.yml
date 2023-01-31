@@ -17,3 +17,4 @@ jobs:
           projectId: favotify-dev
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
+          FIREBASE_CLI_PREVIEWS: hostingchannels
