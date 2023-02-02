@@ -1,29 +1,18 @@
-import { Heading } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Stack, Text, useTheme } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import Link from 'next/link';
-import NavigationBar from '../components/NavigationBar';
-import {
-  Box,
-  Text,
-  Button,
-  Stack,
-} from '@chakra-ui/react';
 
 const Home: NextPage = () => {
+  const theme = useTheme()
   return (
     <>
-      <NavigationBar>
-        <ul>
-          <li>
-            <Link href='/'>LP Page</Link>
-          </li>
-          <li>
-            <Link href='/setting'>Setting Page</Link>
-          </li>
-        </ul>
-      </NavigationBar>
+      <Flex
+        minH={'100vh'}
+        align={'center'}
+        justify={'center'}
+        background={"#1DB954"}
+      >
         <Stack
-          background={"#1ED760"}
+
           as={Box}
           textAlign={'center'}
           spacing={{ base: 8, md: 14 }}
@@ -31,22 +20,22 @@ const Home: NextPage = () => {
           <Heading
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-            >
+          >
             <Text as={'span'} color={'#FFFFFF'}>
               favotify
             </Text>
           </Heading>
           <Text color={'#FFFFFF'}>
-          機能の説明とSpotifyへのアカウントリンクを促す文章。
-          <br />
-          機能の説明とSpotifyへのアカウントリンクを促す文章。
-          <br />
-          機能の説明とSpotifyへのアカウントリンクを促す文章。
-          <br />
-          機能の説明とSpotifyへのアカウントリンクを促す文章。
-          <br />
-          機能の説明とSpotifyへのアカウントリンクを促す文章。
-          <br />
+            機能の説明とSpotifyへのアカウントリンクを促す文章。
+            <br />
+            機能の説明とSpotifyへのアカウントリンクを促す文章。
+            <br />
+            機能の説明とSpotifyへのアカウントリンクを促す文章。
+            <br />
+            機能の説明とSpotifyへのアカウントリンクを促す文章。
+            <br />
+            機能の説明とSpotifyへのアカウントリンクを促す文章。
+            <br />
           </Text>
           <Stack
             direction={'column'}
@@ -59,7 +48,8 @@ const Home: NextPage = () => {
             </Button>
           </Stack>
         </Stack>
-        </>
+      </Flex>
+    </>
   );
 };
 
