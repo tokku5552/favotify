@@ -6,7 +6,8 @@
  *
  */
 
-import { AddIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { SpotifyUserProfile } from '@/types/SpotifyApi';
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Avatar,
   Box,
@@ -43,7 +44,12 @@ const NavLink = ({ children }: { children: ReactNode }) => (
   </Link>
 );
 
-export default function NavigationBar({ children }: { children: ReactNode }) {
+export interface NavigationBarProps {
+  children: ReactNode;
+  user: SpotifyUserProfile;
+}
+
+export default function NavigationBar({ children, user }: NavigationBarProps) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -59,7 +65,7 @@ export default function NavigationBar({ children }: { children: ReactNode }) {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+            <Box>{user.display_name}</Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
@@ -67,23 +73,9 @@ export default function NavigationBar({ children }: { children: ReactNode }) {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <Button
-              variant={'solid'}
-              colorScheme={'teal'}
-              size={'sm'}
-              mr={4}
-              leftIcon={<AddIcon />}
-            >
-              Action
-            </Button>
             <Menu>
               <MenuButton as={Button} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
-                <Avatar
-                  size={'sm'}
-                  src={
-                    'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-                  }
-                />
+                <Avatar size={'sm'} src={user.imageUrl} />
               </MenuButton>
               <MenuList>
                 <MenuItem>Link 1</MenuItem>

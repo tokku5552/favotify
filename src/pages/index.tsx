@@ -1,8 +1,15 @@
+import { getSpotifyLoginPath } from '@/api/spotify';
+import { Button } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useCallback } from 'react';
 
 const Home: NextPage = () => {
+  const login = useCallback(() => {
+    window.location.href = getSpotifyLoginPath();
+  }, []);
+
   return (
     <div>
       <Head>
@@ -14,6 +21,7 @@ const Home: NextPage = () => {
       <main>
         <h1>LP!</h1>
         <Link href='/top'>Top Page</Link>
+        <Button onClick={login}>Login!</Button>
       </main>
     </div>
   );
