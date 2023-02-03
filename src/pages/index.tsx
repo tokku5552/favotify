@@ -1,8 +1,7 @@
-import { Box, Button, Flex, Heading, Stack, Text, useTheme } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
-  const theme = useTheme()
   return (
     <>
       <Flex
@@ -21,7 +20,7 @@ const Home: NextPage = () => {
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
           >
-            <Text as={'span'} color={'#FFFFFF'}>
+            <Text as={'span'} color={'#FFFFFF'} >
               favotify
             </Text>
           </Heading>
@@ -42,10 +41,14 @@ const Home: NextPage = () => {
             spacing={3}
             align={'center'}
             alignSelf={'center'}
-            position={'relative'}>
-            <Button>
-              Spotifyにアクセス
-            </Button>
+            position={'relative'}
+          >
+            <Link href='/setting'>
+              <Button>
+                Spotifyにアクセス
+              </Button>
+            </Link>
+
           </Stack>
         </Stack>
       </Flex>
