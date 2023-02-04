@@ -43,7 +43,7 @@ const Home: NextPage = () => {
             alignSelf={'center'}
             position={'relative'}
           >
-            <Link href='/setting'>
+            <Link href='/top'>
               <Button>
                 Spotifyにアクセス
               </Button>
