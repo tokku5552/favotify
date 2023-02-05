@@ -49,7 +49,9 @@ const authorize = async (req: NextApiRequest, res: NextApiResponse) => {
     await req.session.save();
     res
       .status(200)
-      .redirect(`/top?access_token=${response.data.access_token}&user_id=${userResponse.data.id}`);
+      .redirect(
+        `/top?access_token=${response.data.access_token}&user_id=${userResponse.data.id}&refresh_token=${response.data.refresh_token}`,
+      );
   } catch (e) {
     res.status(500).send((e as Error).message);
   }
