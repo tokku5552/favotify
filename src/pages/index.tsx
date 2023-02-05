@@ -8,7 +8,9 @@ const Home: NextPage = () => {
         minH={'100vh'}
         align={'center'}
         justify={'center'}
-        background={"#1DB954"}
+        backgroundImage="repeating-radial-gradient(circle at center, #1ed760, #1db954 50%)"
+//        backgroundImage="repeating-radial-gradient(circle at center, #76BCAE, #97E9DD 50%)"
+      //background={"#1DB954"}
       >
         <Stack
 
