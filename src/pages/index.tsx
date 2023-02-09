@@ -1,16 +1,25 @@
-import { Box, Button, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, keyframes, Link, Stack, Text } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
+
+const animationKeyframes = keyframes`
+  0% { transform: scale(1); border-radius: 20%; }
+  
+  100% { transform: scale(2) ; border-radius: 20%; }
+`;
+
+const animation = `${animationKeyframes} 2s ease-in-out infinite`;
 
 const Home: NextPage = () => {
   return (
     <>
       <Flex
+        as={motion.div}
+        animation={animation}
         minH={'100vh'}
         align={'center'}
         justify={'center'}
         backgroundImage="repeating-radial-gradient(circle at center, #1ed760, #1db954 50%)"
-//        backgroundImage="repeating-radial-gradient(circle at center, #76BCAE, #97E9DD 50%)"
-      //background={"#1DB954"}
       >
         <Stack
 
@@ -54,6 +63,7 @@ const Home: NextPage = () => {
           </Stack>
         </Stack>
       </Flex>
+
     </>
   );
 };
