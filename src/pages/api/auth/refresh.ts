@@ -33,6 +33,7 @@ const refresh = async (req: NextApiRequest, res: NextApiResponse) => {
         res.json({ accessToken: response.access_token, refreshToken: response.refresh_token });
       } else {
         res.status(401);
+        res.redirect('/api/auth/authorize');
         res.json({ message: 'unauthorized' });
       }
     }

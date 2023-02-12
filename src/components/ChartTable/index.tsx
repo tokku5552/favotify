@@ -22,7 +22,7 @@ export default function ChartTable(props: ChartTableProps) {
         <Tbody>
           {charts.map((data) => {
             return (
-              <Tr>
+              <Tr key={data.title}>
                 <Td>{data.title}</Td>
                 <Td>{data.artist}</Td>
                 <Td isNumeric>{data.plays}</Td>
