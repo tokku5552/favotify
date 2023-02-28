@@ -10,25 +10,24 @@ const Home: NextPage = () => {
         //backgroundImage="repeating-radial-gradient(circle at center, #1ed760, #1db954 50%)"
         backgroundColor={'black'}
       >
-        <Heading
-          as='h1'
-          fontWeight={600}
-          fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+        <HStack
+          textAlign={'center'}
+          spacing={{ base: 8, md: 10 }}
+          py={{ base: 10, md: 10 }}
         >
           <Text
+            fontWeight={600}
+            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             textAlign={'center'}
             as={'span'}
             color={'#FFFFFF'}
           >
             favotify
           </Text>
-        </Heading>
-        <HStack
-          textAlign={'center'}
-          spacing={{ base: 8, md: 10 }}
-          py={{ base: 10, md: 10 }}
-        >
-          <Text color={'#FFFFFF'}>
+          <Text 
+          color={'#FFFFFF'}
+          //backgroundColor={"#1DB954"}
+          >
             機能の説明とSpotifyへのアカウントリンクを促す文章。
             <br />
             機能の説明とSpotifyへのアカウントリンクを促す文章。
