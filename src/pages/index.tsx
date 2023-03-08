@@ -1,4 +1,4 @@
-import { Box, Button, Flex, HStack, Link, Stack, Text } from '@chakra-ui/react';
+import { Button, Flex, HStack, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
@@ -58,17 +58,7 @@ const Home: NextPage = () => {
           >
           </Stack>
         </HStack>
-
       </Flex>
-      <Box
-        bg="green.500"
-        height="100vh"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Box width="50%" height="100%" bg="black"></Box>
-      </Box>
     </>
   );
 };
