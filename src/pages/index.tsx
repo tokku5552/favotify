@@ -1,4 +1,4 @@
-import { Button, Flex, HStack, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, HStack, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
@@ -8,48 +8,63 @@ const Home: NextPage = () => {
         minH={'100vh'}
         align="center"
         justify={'center'}
-        backgroundColor={'black'}
+      // backgroundColor={'black'}
+      //子コンポーネントの幅に依存する
       >
         <HStack
           textAlign={'center'}
           spacing={{ base: 8, md: 10 }}
           py={{ base: 10, md: 10 }}
+
+        //全領域に広げる
         >
-          <Text
-            fontWeight={600}
-            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-            textAlign={'center'}
-            as={'span'}
-            color={'#FFFFFF'}
-            width="50%"
+          <Box
+            minH={'100vh'}
+            backgroundColor={'green'}
+            width="100%"
           >
-            favotify
-          </Text>
-          <Text
-            width="50%"
-            color={'#FFFFFF'}
-          >
-            機能の説明とSpotifyへのアカウントリンクを促す文章。
-            <br />
-            機能の説明とSpotifyへのアカウントリンクを促す文章。
-            <br />
-            機能の説明とSpotifyへのアカウントリンクを促す文章。
-            <br />
-            機能の説明とSpotifyへのアカウントリンクを促す文章。
-            <br />
-            機能の説明とSpotifyへのアカウントリンクを促す文章。
-            <br />
-            <Link
-              href='/top'
+            <Text
+              fontWeight={600}
+              fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+              textAlign={'center'}
+              as={'span'}
+              color={'#FFFFFF'}
+              width="100%"
             >
-              <Button
-                color={'black'}
-                margin="50px 0 0 0"
+              favotify
+            </Text>
+          </Box>
+          <Box
+            minH={'100vh'}
+            backgroundColor={'black'}
+            width="100%"
+          >
+            <Text
+              width="50%"
+              color={'#FFFFFF'}
+            >
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              <Link
+                href='/top'
               >
-                Spotifyにアクセス
-              </Button>
-            </Link>
-          </Text>
+                <Button
+                  color={'black'}
+                  margin="50px 0 0 0"
+                >
+                  Spotifyにアクセス
+                </Button>
+              </Link>
+            </Text>
+          </Box>
           <Stack
             direction={'column'}
             spacing={3}
