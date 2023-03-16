@@ -7,22 +7,28 @@ const Home: NextPage = () => {
       <Flex
         align="center"
         justify={'center'}
+        minH="100vh"
+        w="100%"
+        m={0}
+        p={0}
+        overflow="hidden"
       >
         <HStack
           textAlign={'center'}
           minH="100vh"
           w="100%"
-          m={0}
-          p={0}
-          overflow="hidden"
+          h="100vh"
           spacing={0}
         >
           <Box
             w="50%"
             h="100%"
             bgColor="#1DB954"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
           >
-            <Center h="100%">
+            
               <Text
                 fontWeight={"bold"}
                 fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
@@ -32,16 +38,16 @@ const Home: NextPage = () => {
               >
                 favotify
               </Text>
-            </Center>
           </Box>
           <Box
             w="50%"
             h="100%"
             bgColor="black"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
           >
-            <Center
-              h="100%"
-            >
+            
               <Text
                 fontSize="4xl"
                 fontWeight="bold"
@@ -68,14 +74,6 @@ const Home: NextPage = () => {
                   </Button>
                 </Link>
               </Text>
-            </Center>
-            <Stack
-              direction={'column'}
-              spacing={3}
-              align={'center'}
-              position={'relative'}
-            >
-            </Stack>
           </Box>
         </HStack>
       </Flex>
