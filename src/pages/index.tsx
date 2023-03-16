@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, HStack, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
@@ -8,74 +8,82 @@ const Home: NextPage = () => {
         align="center"
         justify={'center'}
         minH="100vh"
-        w="100%"
-        m={0}
-        p={0}
-        overflow="hidden"
       >
-        <HStack
+        <Flex
           textAlign={'center'}
           minH="100vh"
           w="100%"
-          h="100vh"
-          spacing={0}
+          m={0}
+          p={0}
+          overflow={{ base: 'auto', md: 'hidden' }} 
+          flexDirection={{ base: 'column', md: 'row' }}
         >
           <Box
-            w="50%"
-            h="100%"
+            w={{ base: '100%', md: '50%' }}
+            h={{ base: '50vh', md: '100vh' }}
             bgColor="#1DB954"
             display="flex"
             alignItems="center"
             justifyContent="center"
           >
-            
-              <Text
-                fontWeight={"bold"}
-                fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-                textAlign={'center'}
-                as={'span'}
-                color={'#FFFFFF'}
-              >
-                favotify
-              </Text>
+
+            <Text
+              fontWeight={"bold"}
+              fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+              textAlign={'center'}
+              as={'span'}
+              color={'#FFFFFF'}
+              whiteSpace="pre-wrap"
+              wordBreak="break-word"
+            >
+              favotify
+            </Text>
           </Box>
           <Box
-            w="50%"
-            h="100%"
+            w={{ base: '100%', md: '50%' }}
+            h={{ base: '100vh', md: '100vh' }}
             bgColor="black"
             display="flex"
             alignItems="center"
             justifyContent="center"
           >
-            
-              <Text
-                fontSize="4xl"
-                fontWeight="bold"
-                color="white"
+            <Text
+              fontSize="4xl"
+              fontWeight="bold"
+              color="white"
+              whiteSpace="pre-wrap"
+              wordBreak="break-word"
+            >
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              <Link
+                href='/top'
               >
-                機能の説明とSpotifyへのアカウントリンクを促す文章。
-                <br />
-                機能の説明とSpotifyへのアカウントリンクを促す文章。
-                <br />
-                機能の説明とSpotifyへのアカウントリンクを促す文章。
-                <br />
-                機能の説明とSpotifyへのアカウントリンクを促す文章。
-                <br />
-                機能の説明とSpotifyへのアカウントリンクを促す文章。
-                <br />
-                <Link
-                  href='/top'
+                <Button
+                  color={'black'}
+                  margin="50px 0 0 0"
                 >
-                  <Button
-                    color={'black'}
-                    margin="50px 0 0 0"
-                  >
-                    Spotifyにアクセス
-                  </Button>
-                </Link>
-              </Text>
+                  Spotifyにアクセス
+                </Button>
+              </Link>
+            </Text>
+            <Stack
+              direction={'column'}
+              spacing={3}
+              align={'center'}
+              position={'relative'}
+            >
+            </Stack>
           </Box>
-        </HStack>
+        </Flex>
       </Flex>
     </>
   );
