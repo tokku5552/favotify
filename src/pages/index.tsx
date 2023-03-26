@@ -1,6 +1,7 @@
 import { CheckIcon } from '@chakra-ui/icons';
 import { Box, Button, Flex, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import { FaSpotify } from "react-icons/fa";
 
 const Home: NextPage = () => {
   return (
@@ -63,7 +64,7 @@ const Home: NextPage = () => {
               <Link href='/top'>
                 <Button 
                 margin='50px 0 0 0'
-                leftIcon={<Icon as={CheckIcon} />}
+                leftIcon={<Icon as={FaSpotify} />}
                 bgColor='white'
                 color='black'
                 borderRadius='full'
