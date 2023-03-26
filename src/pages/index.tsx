@@ -1,4 +1,5 @@
-import { Box, Button, Flex, Link, Stack, Text } from '@chakra-ui/react';
+import { CheckIcon } from '@chakra-ui/icons';
+import { Box, Button, Flex, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
@@ -17,7 +18,7 @@ const Home: NextPage = () => {
           <Box
             w={{ base: '100%', md: '50%' }}
             h={{ base: '50vh', md: '100vh' }}
-            bgColor='#1DB954'
+            bgColor='#1EB16A'
             display='flex'
             alignItems='center'
             justifyContent='center'
@@ -60,8 +61,17 @@ const Home: NextPage = () => {
               機能の説明とSpotifyへのアカウントリンクを促す文章。
               <br />
               <Link href='/top'>
-                <Button color={'black'} margin='50px 0 0 0'>
-                  Spotifyにアクセス
+                <Button 
+                margin='50px 0 0 0'
+                leftIcon={<Icon as={CheckIcon} />}
+                bgColor='white'
+                color='black'
+                borderRadius='full'
+                _hover={{
+                  bgColor: 'gray.200',
+                }}
+                >
+                  Sign in with Spotify
                 </Button>
               </Link>
             </Text>
