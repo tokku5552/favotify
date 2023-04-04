@@ -1,7 +1,6 @@
-import { CheckIcon } from '@chakra-ui/icons';
 import { Box, Button, Flex, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import { FaSpotify } from "react-icons/fa";
+import { FaSpotify } from 'react-icons/fa';
 
 const Home: NextPage = () => {
   return (
@@ -13,12 +12,12 @@ const Home: NextPage = () => {
           w='100%'
           m={0}
           p={0}
-          overflow={{ base: 'auto', md: 'hidden' }}
-          flexDirection={{ base: 'column', md: 'row' }}
+          overflow={{ base: 'auto', lg: 'hidden' }}
+          flexDirection={{ base: 'column', lg: 'row' }}
         >
           <Box
-            w={{ base: '100%', md: '50%' }}
-            h={{ base: '50vh', md: '100vh' }}
+            w={{ base: '100%', lg: '50%' }}
+            h={{ base: '50vh', lg: '100vh' }}
             bgColor='#1EB16A'
             display='flex'
             alignItems='center'
@@ -37,15 +36,15 @@ const Home: NextPage = () => {
             </Text>
           </Box>
           <Box
-            w={{ base: '100%', md: '50%' }}
-            h={{ base: '50vh', md: '100vh' }}
+            w={{ base: '100%', lg: '50%' }}
+            h={{ base: '50vh', lg: '100vh' }}
             bgColor='black'
             display='flex'
             alignItems='center'
             justifyContent='center'
           >
             <Text
-              fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}
+              fontSize={{ base: '1xl', sm: '2xl',md: '3xl', lg: '4xl' }}
               fontWeight='bold'
               color='white'
               whiteSpace='pre-wrap'
@@ -62,15 +61,15 @@ const Home: NextPage = () => {
               機能の説明とSpotifyへのアカウントリンクを促す文章。
               <br />
               <Link href='/top'>
-                <Button 
-                margin='50px 0 0 0'
-                leftIcon={<Icon as={FaSpotify} />}
-                bgColor='white'
-                color='black'
-                borderRadius='full'
-                _hover={{
-                  bgColor: 'gray.200',
-                }}
+                <Button
+                  margin='50px 0 0 0'
+                  leftIcon={<Icon as={FaSpotify} />}
+                  bgColor='white'
+                  color='black'
+                  borderRadius='full'
+                  _hover={{
+                    bgColor: 'gray.200',
+                  }}
                 >
                   Sign in with Spotify
                 </Button>
