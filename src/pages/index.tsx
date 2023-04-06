@@ -32,7 +32,7 @@ const Home: NextPage = () => {
               whiteSpace='pre-wrap'
               wordBreak='break-word'
             >
-              favotify
+              Favotify
             </Text>
           </Box>
           <Box
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
             justifyContent='center'
           >
             <Text
-              fontSize={{ base: '1xl', sm: '2xl',md: '3xl', lg: '4xl' }}
+              fontSize={{ base: '1xl', sm: '2xl', md: '3xl', lg: '4xl' }}
               fontWeight='bold'
               color='white'
               whiteSpace='pre-wrap'

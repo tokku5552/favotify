@@ -1,6 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import theme from '../theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -9,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         {/* 本当はdevelopmentのみ */}
         <meta name='robots' content='noindex' />
       </Head>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
     </>
