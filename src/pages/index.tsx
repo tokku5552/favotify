@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Icon, Image, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import { FaSpotify } from 'react-icons/fa';
 
@@ -23,17 +23,26 @@ const Home: NextPage = () => {
             alignItems='center'
             justifyContent='center'
           >
-            <Text
-              fontWeight={'bold'}
-              fontSize={{ base: '4xl', sm: '5xl', md: '7xl' }}
-              textAlign={'center'}
-              as={'span'}
-              color={'#FFFFFF'}
-              whiteSpace='pre-wrap'
-              wordBreak='break-word'
-            >
-              Favotify
-            </Text>
+            <Flex alignItems='center'>
+              <Image
+                src='/icon.png'
+                alt='Favotify Icon'
+                width={{ base: '36px', md: '72px' }}
+                height={{ base: '36px', md: '72px' }}
+                marginRight={2}
+              />
+              <Text
+                fontWeight={'bold'}
+                fontSize={{ base: '4xl', sm: '5xl', md: '7xl' }}
+                textAlign={'center'}
+                as={'span'}
+                color={'#FFFFFF'}
+                whiteSpace='pre-wrap'
+                wordBreak='break-word'
+              >
+                Favotify
+              </Text>
+            </Flex>
           </Box>
           <Box
             w={{ base: '100%', lg: '50%' }}
