@@ -18,30 +18,13 @@ const Home: NextPage = () => {
           <Box
             w={{ base: '100%', lg: '50%' }}
             h={{ base: '50vh', lg: '100vh' }}
-            bgColor='#1EB16A'
+            bgColor='#545454'
             display='flex'
             alignItems='center'
             justifyContent='center'
           >
-            <Flex alignItems='center'>
-              <Image
-                src='/icon.png'
-                alt='Favotify Icon'
-                width={{ base: '36px', md: '72px' }}
-                height={{ base: '36px', md: '72px' }}
-                marginRight={2}
-              />
-              <Text
-                fontWeight={'bold'}
-                fontSize={{ base: '4xl', sm: '5xl', md: '7xl' }}
-                textAlign={'center'}
-                as={'span'}
-                color={'#FFFFFF'}
-                whiteSpace='pre-wrap'
-                wordBreak='break-word'
-              >
-                Favotify
-              </Text>
+            <Flex alignItems='center' justifyContent='center' width='100%'>
+              <Image src='/icon_and_titleText.png' alt='Favotify Icon' boxSize={'70%'} />
             </Flex>
           </Box>
           <Box
