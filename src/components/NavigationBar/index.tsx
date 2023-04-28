@@ -6,6 +6,7 @@
  *
  */
 
+
 import { AddIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Avatar,
@@ -25,8 +26,6 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
-
-const Links = ['Dashboard', 'Projects', 'Team'];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -59,23 +58,9 @@ export default function NavigationBar({ children }: { children: ReactNode }) {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
-            <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </HStack>
+            <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}></HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <Button
-              variant={'solid'}
-              colorScheme={'teal'}
-              size={'sm'}
-              mr={4}
-              leftIcon={<AddIcon />}
-            >
-              Action
-            </Button>
             <Menu>
               <MenuButton as={Button} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
                 <Avatar
@@ -97,11 +82,7 @@ export default function NavigationBar({ children }: { children: ReactNode }) {
 
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </Stack>
+            <Stack as={'nav'} spacing={4}></Stack>
           </Box>
         ) : null}
       </Box>
