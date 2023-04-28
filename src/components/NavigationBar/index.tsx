@@ -6,7 +6,6 @@
  *
  */
 
-
 import { AddIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Avatar,
@@ -22,6 +21,7 @@ import {
   MenuItem,
   MenuList,
   Stack,
+  Text,
   useColorModeValue,
   useDisclosure,
 } from '@chakra-ui/react';
@@ -48,7 +48,7 @@ export default function NavigationBar({ children }: { children: ReactNode }) {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+      <Box bg={useColorModeValue('#1EB16A', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -60,6 +60,9 @@ export default function NavigationBar({ children }: { children: ReactNode }) {
           <HStack spacing={8} alignItems={'center'}>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}></HStack>
           </HStack>
+          <Text fontSize="xl" fontWeight="bold" display={{ base: 'block', md: 'block' }}>
+            favotify
+          </Text>
           <Flex alignItems={'center'}>
             <Menu>
               <MenuButton as={Button} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
