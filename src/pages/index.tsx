@@ -36,7 +36,8 @@ const Home: NextPage = () => {
             justifyContent='center'
           >
             <Text
-              fontSize={{ base: '1xl', sm: '2xl', md: '3xl', lg: '4xl' }}
+              fontSize={{ base: '20px', sm: '20px', md: '3xl', lg: '4xl' }}
+              margin={{ base: '0 0 0 0', sm: '0 0 0 0', md: '70px 0 0 0', lg: '0 0 0 0' }}
               fontWeight='bold'
               color='white'
               whiteSpace='pre-wrap'
