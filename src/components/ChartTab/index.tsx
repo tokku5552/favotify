@@ -7,7 +7,7 @@ export default function ChartTab() {
   return (
     <>
       <Center>
-        <Box w='60%'>
+        <Box w='100%'>
           <Tabs>
             <TabList>
               <Tab>Daily</Tab>
