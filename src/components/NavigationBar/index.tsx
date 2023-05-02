@@ -11,6 +11,7 @@ import {
   MenuDivider,
   MenuItem,
   MenuList,
+  Spacer,
   Stack,
   Text,
   useColorModeValue,
@@ -40,12 +41,19 @@ export default function NavigationBar({ children }: { children: ReactNode }) {
   return (
     <>
       <Box>
-        <Flex h={16} alignItems={'center'} bg={useColorModeValue('#1EB16A', 'gray.900')} px={4} >
-          <Box flex={1} textAlign='center'>
-            <Text fontSize='xl' fontWeight='bold' display={{ base: 'block', md: 'block' }}>
-              favotify
-            </Text>
-          </Box>
+        <Flex h={16} alignItems={'center'} bg={useColorModeValue('#1EB16A', 'gray.900')} px={4}>
+          <IconButton
+            size={'md'}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={'Open Menu'}
+            display="none"
+            onClick={isOpen ? onClose : onOpen}
+          />
+          <Spacer />
+          <Text fontSize='xl' fontWeight='bold' display={{ base: 'block', md: 'block' }}>
+            favotify
+          </Text>
+          <Spacer />
           <Flex alignItems={'center'}>
             <Menu>
               <MenuButton as={Button} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
