@@ -3,7 +3,7 @@ import { dummyChartData } from '../../commons/dummy.data';
 import ChartTable from '../ChartTable';
 
 export default function ChartTab() {
-  const { span, charts } = dummyChartData;
+  const { term, charts } = dummyChartData;
   return (
     <>
       <Center>
@@ -18,7 +18,7 @@ export default function ChartTab() {
 
             <TabPanels>
               <TabPanel>
-                <ChartTable span={span} charts={charts} />
+                <ChartTable term={term} charts={charts} />
               </TabPanel>
               <TabPanel>
                 <p>weekly!</p>

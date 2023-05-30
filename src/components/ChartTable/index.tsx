@@ -3,12 +3,12 @@ import { Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/reac
 import { ChartData } from '../../types/ChartData';
 
 export interface ChartTableProps {
-  span: 'daily' | 'weekly' | 'monthly' | 'yearly';
+  term: 'daily' | 'weekly' | 'monthly' | 'yearly';
   charts: ChartData[];
 }
 
 export default function ChartTable(props: ChartTableProps) {
-  const { span, charts } = props;
+  const { term, charts } = props;
   return (
     <TableContainer>
       <Table variant='striped' colorScheme='blue'>

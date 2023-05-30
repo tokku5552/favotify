@@ -1,7 +1,7 @@
 import { ChartTableProps } from '../components/ChartTable';
 
 export const dummyChartData: ChartTableProps = {
-  span: 'daily',
+  term: 'daily',
   charts: [
     { title: 'Nutella', artist: 'Mo Falk', plays: 201 },
     { title: 'forward', artist: 'ggrks', plays: 36 },
