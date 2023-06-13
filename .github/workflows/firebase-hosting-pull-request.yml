@@ -9,7 +9,6 @@ on:
       - src/**
       - .firebaserc
       - firebase.json
-      - package.json
       - next-env.d.ts
       - next.config.js
 jobs:
