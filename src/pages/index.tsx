@@ -1,7 +1,6 @@
-import { getSpotifyLoginPath } from '@/api/spotify';
-import { Box, Button, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Icon, Image, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import { useCallback } from 'react';
+import { FaSpotify } from 'react-icons/fa';
 
 const Home: NextPage = () => {
   const login = useCallback(() => {
@@ -10,42 +9,72 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Flex minH={'100vh'} align={'center'} justify={'center'} background={'#1DB954'}>
-        <Stack
-          as={Box}
+      <Flex align='center' justify={'center'} minH='100vh'>
+        <Flex
           textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}
+          minH='100vh'
+          w='100%'
+          m={0}
+          p={0}
+          overflow={{ base: 'auto', lg: 'hidden' }}
+          flexDirection={{ base: 'column', lg: 'row' }}
         >
-          <Heading fontWeight={600} fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}>
-            <Text as={'span'} color={'#FFFFFF'}>
-              favotify
-            </Text>
-          </Heading>
-          <Text color={'#FFFFFF'}>
-            機能の説明とSpotifyへのアカウントリンクを促す文章。
-            <br />
-            機能の説明とSpotifyへのアカウントリンクを促す文章。
-            <br />
-            機能の説明とSpotifyへのアカウントリンクを促す文章。
-            <br />
-            機能の説明とSpotifyへのアカウントリンクを促す文章。
-            <br />
-            機能の説明とSpotifyへのアカウントリンクを促す文章。
-            <br />
-          </Text>
-          <Stack
-            direction={'column'}
-            spacing={3}
-            align={'center'}
-            alignSelf={'center'}
-            position={'relative'}
+          <Box
+            w={{ base: '100%', lg: '50%' }}
+            h={{ base: '50vh', lg: '100vh' }}
+            bgColor='#545454'
+            display='flex'
+            alignItems='center'
+            justifyContent='center'
           >
-            <Link href='/top'>
-              <Button onClick={login}>Spotifyにアクセス</Button>
-            </Link>
-          </Stack>
-        </Stack>
+            <Flex alignItems='center' justifyContent='center' width='100%'>
+              <Image src='/icon_and_titleText.png' alt='Favotify Icon' boxSize={'70%'} />
+            </Flex>
+          </Box>
+          <Box
+            w={{ base: '100%', lg: '50%' }}
+            h={{ base: '50vh', lg: '100vh' }}
+            bgColor='black'
+            display='flex'
+            alignItems='center'
+            justifyContent='center'
+          >
+            <Text
+              fontSize={{ base: '20px', sm: '20px', md: '3xl', lg: '4xl' }}
+              margin={{ base: '0 0 0 0', sm: '0 0 0 0', md: '70px 0 0 0', lg: '0 0 0 0' }}
+              fontWeight='bold'
+              color='white'
+              whiteSpace='pre-wrap'
+              wordBreak='break-word'
+            >
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              機能の説明とSpotifyへのアカウントリンクを促す文章。
+              <br />
+              <Link href='/top'>
+                <Button
+                  margin='50px 0 0 0'
+                  leftIcon={<Icon as={FaSpotify} />}
+                  bgColor='white'
+                  color='black'
+                  borderRadius='full'
+                  _hover={{
+                    bgColor: 'gray.200',
+                  }}
+                >
+                  Sign in with Spotify
+                </Button>
+              </Link>
+            </Text>
+            <Stack direction={'column'} spacing={3} align={'center'} position={'relative'}></Stack>
+          </Box>
+        </Flex>
       </Flex>
     </>
   );

@@ -20,9 +20,9 @@ export default function ChartTable(props: ChartTableProps) {
           </Tr>
         </Thead>
         <Tbody>
-          {charts.map((data) => {
+          {charts.map((data, index) => {
             return (
-              <Tr key={data.title}>
+              <Tr key={index}>
                 <Td>{data.title}</Td>
                 <Td>{data.artist}</Td>
                 <Td isNumeric>{data.plays}</Td>

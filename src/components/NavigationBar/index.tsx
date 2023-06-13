@@ -1,19 +1,9 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-/**
- *
- * このコードはtempatesから持ってきただけ
- * https://chakra-templates.dev/navigation/navbar
- *
- */
-
-import { SpotifyUserProfile } from '@/types/SpotifyApi';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Avatar,
   Box,
   Button,
   Flex,
-  HStack,
   IconButton,
   Link,
   Menu,
@@ -21,13 +11,13 @@ import {
   MenuDivider,
   MenuItem,
   MenuList,
+  Spacer,
   Stack,
+  Text,
   useColorModeValue,
   useDisclosure,
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
-
-const Links = ['Dashboard', 'Projects', 'Team'];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -55,23 +45,20 @@ export default function NavigationBar({ children, user }: NavigationBarProps) {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+      <Box>
+        <Flex h={16} alignItems={'center'} bg={useColorModeValue('#1EB16A', 'gray.900')} px={4}>
           <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
-            display={{ md: 'none' }}
+            display='none'
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems={'center'}>
-            <Box>{user.display_name}</Box>
-            <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </HStack>
-          </HStack>
+          <Spacer />
+          <Text fontSize='xl' fontWeight='bold' display={{ base: 'block', md: 'block' }}>
+            favotify
+          </Text>
+          <Spacer />
           <Flex alignItems={'center'}>
             <Menu>
               <MenuButton as={Button} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
@@ -89,11 +76,7 @@ export default function NavigationBar({ children, user }: NavigationBarProps) {
 
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </Stack>
+            <Stack as={'nav'} spacing={4}></Stack>
           </Box>
         ) : null}
       </Box>
