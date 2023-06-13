@@ -9,7 +9,6 @@ on:
       - src/**
       - .firebaserc
       - firebase.json
-      - package.json
       - next-env.d.ts
       - next.config.js
 jobs:
@@ -17,7 +16,7 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: yarn && yarn export
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
