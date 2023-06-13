@@ -1,5 +1,7 @@
+import { getSpotifyLoginPath } from '@/api/spotify';
 import { Box, Button, Flex, Icon, Image, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import { useCallback } from 'react';
 import { FaSpotify } from 'react-icons/fa';
 
 const Home: NextPage = () => {
